@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>我的相册代码 | Hexo</title>
+    <title>建立的初衷 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="John Doe">
     
 
     
-    <meta name="description" content="html {     overflow: hidden; } body {     background: #222;     width: 100%;     height: 100%;     cursor: crosshair; } .spanSlide {     position: absolute;     background: #000;     font-size: 1px;">
+    <meta name="description" content="天天在公司摸鱼 闲的慌">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的相册代码">
-<meta property="og:url" content="http://yoursite.com/2020/04/10/My-New-Post/index.html">
+<meta property="og:title" content="建立的初衷">
+<meta property="og:url" content="http://yoursite.com/2020/04/11/start/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="html {     overflow: hidden; } body {     background: #222;     width: 100%;     height: 100%;     cursor: crosshair; } .spanSlide {     position: absolute;     background: #000;     font-size: 1px;">
+<meta property="og:description" content="天天在公司摸鱼 闲的慌">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-10T04:48:27.000Z">
-<meta property="article:modified_time" content="2020-04-10T06:52:08.657Z">
+<meta property="article:published_time" content="2020-04-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-11T08:47:52.272Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -35,6 +35,8 @@
     
     
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/%02.css">
+<link rel="stylesheet" href="/.css">
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 
@@ -83,14 +85,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2020/04/10/My-New-Post/" title="我的相册代码" itemprop="url">我的相册代码</a>
+      <a href="/2020/04/11/start/" title="建立的初衷" itemprop="url">建立的初衷</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
 		
   <p class="article-time">
-    <time datetime="2020-04-10T04:48:27.000Z" itemprop="datePublished"> Published 2020-04-10</time>
+    <time datetime="2020-04-10T16:00:00.000Z" itemprop="datePublished"> Published 2020-04-11</time>
     
   </p>
 </header>
@@ -103,145 +105,8 @@
 		
 		</div>
 		
-		<pre><code>html {
-    overflow: hidden;
-}
-body {
-    background: #222;
-    width: 100%;
-    height: 100%;
-    cursor: crosshair;
-}
-.spanSlide {
-    position: absolute;
-    background: #000;
-    font-size: 1px;
-    overflow: hidden;
-}
-.imgSlide {
-    position: absolute;
-    left: 5%;
-    top: 5%;
-    width: 90%;
-    height: 90%;
-    overflow: hidden;
-}
-.txtSlide {
-    position: absolute;
-    top: 5%;
-    left: 50px;
-    width:100%;
-    color:#FFF;
-    font-family: arial, helvetica, verdana, sans-serif;
-    font-weight: bold;
-    font-size:96px;
-    letter-spacing:12px;
-    filter: alpha(opacity=70);
-    -moz-opacity:0.7;
-    opacity:0.7;
-}
-
-
-
-&lt;div style=&quot;position:absolute;left:50%;top:50%&quot;&gt;
-    &lt;div style=&quot;position:absolute;width:720px;height:560px;left:-360px;top:-280px;background:#fff&quot;&gt;&lt;/div&gt;
-    &lt;div style=&quot;position:absolute;left:-40px;top:-6px;color:#000;font-family:arial;font-size:0.9em&quot;&gt;Lording...&lt;/div&gt;
-    &lt;div id=&quot;screen&quot; style=&quot;position:absolute;width:640px;height:480px;left:-320px;top:-240px;overflow:hidden&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;images&quot; style=&quot;visibility:hidden&quot;&gt;
-    &lt;img title=&quot;给&quot; src=&quot;11/1.jpg&quot;&gt;
-    &lt;img title=&quot;你&quot; src=&quot;11/2.jpg&quot;&gt;
-    &lt;img title=&quot;的&quot; src=&quot;11/3.jpg&quot;&gt;
-    &lt;img title=&quot;相&quot; src=&quot;11/4.jpg&quot;&gt;
-    &lt;img title=&quot;册&quot; src=&quot;11/5.jpg&quot;&gt;
-&lt;/div&gt;
-
-
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-
-    var ym=0;
-    var ny=0;
-
-    createElement = function(container, type, param){
-        o=document.createElement(type);
-        for(var i in param)o[i]=param[i];
-        container.appendChild(o);
-        return o;
-    }
-
-    mooz = {
-        O:[],
-        /////////
-        mult:6,
-        nbI:5,
-        /////////
-        rwh:0,
-        imgsrc:0,
-        W:0,
-        H:0,
-
-        Xoom:function(N){
-            this.o = createElement(document.getElementById(&quot;screen&quot;), &quot;span&quot;, {
-                &apos;className&apos;:&apos;spanSlide&apos;
-            });
-            img = createElement(this.o, &quot;img&quot;, {
-                &apos;className&apos;:&quot;imgSlide&quot;,
-                &apos;src&apos;:mooz.imgsrc[N%mooz.imgsrc.length].src
-            });
-            spa = createElement(this.o, &quot;span&quot;, {
-                &apos;className&apos;:&quot;imgSlide&quot;
-            });
-            txt = createElement(spa, &quot;span&quot;, {
-                &apos;className&apos;:&quot;txtSlide&quot;,
-                &apos;innerHTML&apos;:mooz.imgsrc[N%mooz.imgsrc.length].title
-            });
-            this.N = 10000+N;
-        },
-
-        mainloop:function(){
-            with(this){
-                for(i=0; i&lt;mooz.nbI; i++) {
-                    O[i].N += (ym-ny)/8000;
-                    N = O[i].N%nbI;
-                    ti = Math.pow(mult,N);
-                    with(O[i].o.style){
-                        left   = Math.round((W-(ti*rwh))/(W+ti)*(W*.5))+&quot;px&quot;;
-                        top    = Math.round((H-ti)/(H+ti)*(H*.5))+&quot;px&quot;;
-                        zIndex = Math.round(10000-ti*.1);
-                        width  = Math.round(ti*rwh)+&quot;px&quot;;
-                        height = Math.round(ti)+&quot;px&quot;;
-                    }
-                }
-            }
-            setTimeout(&quot;mooz.mainloop();&quot;, 16);
-        },
-
-        oigres:function(){
-            with(this){
-                W = parseInt(document.getElementById(&quot;screen&quot;).style.width);
-                H = parseInt(document.getElementById(&quot;screen&quot;).style.height);
-                imgsrc = document.getElementById(&quot;images&quot;).getElementsByTagName(&quot;img&quot;);
-                rwh = imgsrc[0].width/imgsrc[0].height;
-                for(var i=0;i&lt;nbI;i++) O[i] = new Xoom(i);
-                mainloop();
-            }
-        }
-    }
-
-    document.onmousemove = function(e){
-        if(window.event) e=window.event;
-        ym = (e.y || e.clientY);
-        if(ym/2&gt;ny)ny=ym/2;
-    }
-
-    window.onload = function(){
-        ym = ny+50;
-        mooz.oigres();
-    }
-
-    &lt;/script&gt;</code></pre>  
+		<p>天天在公司摸鱼 闲的慌</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -253,7 +118,7 @@ body {
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2020/04/10/My-New-Post/" data-title="我的相册代码 | Hexo" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2020/04/11/start/" data-title="建立的初衷 | Hexo" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -266,19 +131,11 @@ body {
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2020/04/11/start/" title="建立的初衷">
-  <strong>上一篇：</strong><br/>
-  <span>
-  建立的初衷</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2020/04/10/hello-world/"  title="Hello World">
+<a href="/2020/04/10/My-New-Post/"  title="我的相册代码">
  <strong>下一篇：</strong><br/> 
- <span>Hello World
+ <span>我的相册代码
 </span>
 </a>
 </div>
